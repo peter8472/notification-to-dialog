@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Uwp.Notifications;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -59,6 +60,44 @@ namespace notification_to_dialog
                     ContentDialogResult contentDialogResult = await mydialog.ShowAsync();
                 }
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            // system.timers.timer is not available here.  What is?
+            DispatcherTimer t = new DispatcherTimer();
+            t.Interval = new System.TimeSpan(0, 0, 0, 30);
+            t.Start();
+            sendToast();
+        }
+        private void sendToast()
+        {
+        
+            ToastVisual visual = new ToastVisual()
+            {
+                BindingGeneric = new ToastBindingGeneric()
+                {
+                    Children =
+                    {
+                        new AdaptiveText()
+                        {
+                            Text = "title"
+                        },
+                        new AdaptiveText()
+                        {
+                            Text = "content"
+                        }
+                    }
+                }
+            };
+            ToastContent toastContent = new ToastContent()
+            {
+                Visual = visual
+            };
+            var toast = new ToastNotification(toastContent.GetXml());
+            toast.ExpirationTime = DateTime.Now.AddSeconds(60);
+            toast.Tag = "100";
+            ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
     }
 }
