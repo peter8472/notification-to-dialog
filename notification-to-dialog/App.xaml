@@ -1,7 +1,7 @@
 ﻿<Application
-    x:Class="notification_to_dialog.App"
+    x:Class="email_checker.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:notification_to_dialog">
+    xmlns:local="using:email_checker">
 
 </Application>

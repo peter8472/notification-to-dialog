@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace notification_to_dialog
+namespace email_checker
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.

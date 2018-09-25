@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "notification-to-dialog", "notification-to-dialog.csproj", "{622F48E7-B538-48B7-9F0C-99C6036347E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "email-checker", "email-checker.csproj", "{622F48E7-B538-48B7-9F0C-99C6036347E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
